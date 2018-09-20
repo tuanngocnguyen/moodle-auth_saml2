@@ -313,6 +313,7 @@ class auth_plugin_saml2 extends auth_plugin_base {
      * All the checking happens before the login page in this hook
      */
     public function loginpage_hook() {
+
         $pluginsfunction = get_plugins_with_function('set_cookie_login', 'lib.php');
         foreach ($pluginsfunction as $plugintype => $plugins) {
             foreach ($plugins as $pluginfunction) {
